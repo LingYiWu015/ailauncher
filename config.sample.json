@@ -1,0 +1,94 @@
+{
+  "terminal": "C:\\Program Files\\Alacritty\\alacritty.exe",
+  "defaultDirectories": [
+    "C:\\Users\\YourName\\Projects"
+  ],
+  "extension": {
+    "dsh": {
+      "repo": "C:\\Users\\YourName\\Projects\\deepseek-harness"
+    }
+  },
+  "agents": [
+    {
+      "name": "claude",
+      "display": "claude (Claude Code)",
+      "desc": "Anthropic Claude Code CLI",
+      "exec": "claude",
+      "type": "tui",
+      "args": "",
+      "env": {},
+      "extension": {
+        "adapter": {
+          "kind": "none"
+        }
+      },
+      "rootDir": "C:\\Users\\YourName\\Projects\\Claude",
+      "directories": [
+        "C:\\Users\\YourName\\Projects"
+      ]
+    },
+    {
+      "name": "opencode",
+      "display": "opencode (ACP)",
+      "desc": "opencode ACP 服务（TUI 会话直连，需先 opencode auth login）",
+      "exec": "opencode",
+      "type": "tui",
+      "args": "",
+      "env": {},
+      "extension": {
+        "adapter": {
+          "kind": "acp",
+          "command": "opencode",
+          "args": [
+            "acp"
+          ],
+          "env": {},
+          "permission": "ask"
+        }
+      },
+      "rootDir": "C:\\Users\\YourName\\Projects",
+      "directories": [
+        "C:\\Users\\YourName\\Projects"
+      ]
+    },
+    {
+      "name": "codex",
+      "display": "codex",
+      "desc": "OpenAI Codex CLI",
+      "exec": "codex",
+      "type": "tui",
+      "args": "",
+      "env": {},
+      "rootDir": "C:\\Users\\YourName\\Projects\\Codex",
+      "directories": [
+        "C:\\Users\\YourName\\Projects"
+      ]
+    },
+    {
+      "name": "dsh",
+      "display": "DeepSeek Harness",
+      "desc": "DeepSeek Harness Web UI（GUI 型 + 仓库服务型 agent 示例）",
+      "exec": "pnpm",
+      "args": "dsh web",
+      "type": "gui",
+      "extension": {
+        "dsh": {
+          "repo": "C:\\Users\\YourName\\Projects\\deepseek-harness"
+        },
+        "adapter": {
+          "kind": "acp",
+          "command": "pnpm",
+          "args": [
+            "--dir",
+            "C:\\Users\\YourName\\Projects\\deepseek-harness",
+            "run",
+            "demo:acp"
+          ],
+          "cwd": "C:\\Users\\YourName\\Projects\\deepseek-harness",
+          "env": {},
+          "permission": "reject"
+        }
+      }
+    }
+  ]
+}

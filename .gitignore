@@ -1,0 +1,29 @@
+# ---- 个人数据：含个人绝对路径与会话记录，绝不入库 ----
+# 仓库提供 config.sample.json 作为开箱模板；真实 config.json 由使用者本地生成/修改。
+config.json
+config.json.bak-*
+data.json
+data.json.bak-*
+sessions.jsonl
+sessions.jsonl.*
+
+# ---- 构建产物 ----
+# 注意：以下仅匹配仓库根目录，勿写裸 "ailauncher"——那会连 ui/cmd/ailauncher/ 源目录一起忽略。
+/ailauncher.exe
+/ailauncher
+*.exe~
+*.exe.bak-*
+*.test
+*.out
+
+# ---- 本地 agent 工具状态 ----
+.claude/
+.commandcode/
+
+# ---- 编辑器 / 操作系统 ----
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+desktop.ini
+.DS_Store
